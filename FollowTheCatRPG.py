@@ -32,6 +32,9 @@ if followthecat == "yes":
         knowledge += 1
     elif path == "4":
         shadow += 1
+    elif path >=5 or path <0:
+        print("Invalid choice. Please restart the game and choose a valid option.")
+        exit()
 
     print("You continue following the cat and reach a crossroads...a magical object is floating in the air.\n")
     object = input('which magical object do you see?\n'
@@ -48,6 +51,9 @@ if followthecat == "yes":
         knowledge += 1
     elif object == "4":
         shadow += 1
+    elif path >=5 or path <0:
+        print("Invalid choice. Please restart the game and choose a valid option.")
+        exit()
 
     print("The object floats down and you pick it up.\n")
     energy = input('What kind of energy do you feel?\n'
@@ -64,6 +70,9 @@ if followthecat == "yes":
         knowledge += 1
     elif energy == "4":
         shadow += 1
+    elif path >=5 or path <0:
+        print("Invalid choice. Please restart the game and choose a valid option.")
+        exit()
 
     print("The cat meows, making you realise that a shadow is approching you\n")
     shadow_figure = input('which color is the shadow?\n'
@@ -80,6 +89,9 @@ if followthecat == "yes":
         knowledge += 1
     elif shadow_figure == "4":
         shadow += 1
+    elif path >=5 or path <0:
+        print("Invalid choice. Please restart the game and choose a valid option.")
+        exit()
 
     print("The shadow reveals itself to be a mystical creature.\n")
     creature = input('which mystical creature is it?\n'
@@ -96,15 +108,18 @@ if followthecat == "yes":
         knowledge += 1
     elif creature == "4":
         shadow += 1
+    elif path >=5 or path <0:
+        print("Invalid choice. Please restart the game and choose a valid option.")
+        exit()
 
-    print("The cat and the creature talked a little and then the cat looks at you and meows.\n ")
+    print("The cat and the creature talked a little and then the cat looks at you and says:\n ")
 
-    print("The cat looks at you and says: 'It's time to discover your witch type!✨'\n")
+    print("It's time to discover your witch type!✨\n")
 
     if nature >= max(cosmic, knowledge, shadow):
-        print("🧙‍♀️ Nature Witch - You are deeply connected to the Earth and its rhythms.")
+        print("🍃 Nature Witch - You are deeply connected to the Earth and its rhythms.")
     elif cosmic >= max(nature, knowledge, shadow):
-        print("🌌 Cosmic Witch - You channel the stars and universal energy.")
+        print("🌟 Cosmic Witch - You channel the stars and universal energy.")
     elif knowledge >= max(nature, cosmic, shadow):
         print("📜 Knowledge Witch - You wield wisdom and ancient magical texts.")
     elif shadow >= max(nature, cosmic, knowledge):
